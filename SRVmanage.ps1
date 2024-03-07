@@ -1,6 +1,7 @@
 #this menu was made by Frenchineer (@ArmandLemaitre on twitter dot com) feel free to use it.
 
-$steamCMD = "C:\Server\steamcmd" #place your steam CMD exe folder here
+#System variables used multiple time in the code, you still need to place the gateway and
+$steamCMD = "C:\...\steamcmd" #place your steam CMD exe folder here
 
 function Show-Menu {
     Write-Host "================ SRVmanager ================" -BackgroundColor DarkGray -ForegroundColor Black
@@ -40,7 +41,7 @@ function Input-Menu {
     }
     if ($selection -eq "5")
     {
-        Start-Process -FilePath "C:\Server\TF2\srcds.exe" -ArgumentList "-console -game tf +sv_pure 1 +map ctf_2fort +maxplayers 24"
+        Start-Process -FilePath "C:\...\TF2\srcds.exe" -ArgumentList "-console -game tf +sv_pure 1 +map ctf_2fort +maxplayers 24"
         Clear-Host
         Show-Menu
         Write-Host "TF2 launched, giddy up bois!"
@@ -70,8 +71,8 @@ function Input-Menu {
     }
     if ($selection -eq "7")
     {
-        Get-ChildItem -Path "C:\Server\steamcmd\steamapps\workshop\content\440\*.bsp" -Recurse -Force | Copy-Item -Destination "C:\Server\TF2\tf\maps"
-        Get-ChildItem -Path "C:\Server\steamcmd\steamapps\workshop\content\440\*.bsp" -Recurse -Force | Copy-Item -Destination "C:\xampp\htdocs\tf\maps"
+        Get-ChildItem -Path "C:\Server\steamcmd\steamapps\workshop\content\440\*.bsp" -Recurse -Force | Copy-Item -Destination "C:\...\TF2\tf\maps" #change your tf2 maps folder here, will be optimized soon
+        Get-ChildItem -Path "C:\Server\steamcmd\steamapps\workshop\content\440\*.bsp" -Recurse -Force | Copy-Item -Destination "C:\xampp\htdocs\tf\maps" #change your fastDL server path here
         Clear-Host
         Show-Menu
         Write-Host "Workshop map enabled"
