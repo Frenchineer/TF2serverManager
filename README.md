@@ -17,3 +17,9 @@ DiscordSRV: https://discord.com/invite/5bsbmVYkJd
 Support me:
 Steam Trade: https://steamcommunity.com/tradeoffer/new/?partner=393690772&token=w4dgQFi7
 Paypal: https://paypal.me/Frenchineer
+
+Update log:
+V2: added some stuff including separate 64 and 32 bits launch options (I updated it as i used it, I will try to do a better log next time i promise)
+
+PS:
+V3 might be QOS like the path setup.
